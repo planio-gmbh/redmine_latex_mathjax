@@ -18,7 +18,7 @@ module RedmineLatexMathjax
   });
   MathJax.Hub.Typeset();
 </script>\n" +
-            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload') + "
+            javascript_include_tag(MathJaxEmbedMacro.URLToMathJax + '?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=onload', plugin: 'redmine_latex_mathjax') + "
 <script type=\"text/javascript\">
   // Own submitPreview script with Mathjax trigger. Copy & Paste of public/javascripts/application.js
   function MJsubmitPreview(url, form, target) {
@@ -42,8 +42,8 @@ module RedmineLatexMathjax
       	  a[x].setAttribute(\"onclick\", str.replace(\"submitPreview\",\"MJsubmitPreview\"));
           break;
       	};
-      };  
-	};	
+      };
+	};
   });
 </script>"
       end

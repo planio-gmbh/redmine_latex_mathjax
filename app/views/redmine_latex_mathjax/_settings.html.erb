@@ -2,10 +2,6 @@
 
 <legend><%= l(:redmine_latex_mathjax_config_title) %></legend>
 
-<p><label><%= l(:redmine_latex_mathjax_label_url) %>:</label>
-<%= text_field_tag 'settings[latex_mathjax_url]', @settings['latex_mathjax_url'] %><br />
-</p>
-
 <p><label><%= l(:redmine_latex_mathjax_label_inline_delimiter_start) %>:</label>
 <%= text_field_tag 'settings[latex_mathjax_inline_delimiter_start]', @settings['latex_mathjax_inline_delimiter_start'] %><br />
 </p>
