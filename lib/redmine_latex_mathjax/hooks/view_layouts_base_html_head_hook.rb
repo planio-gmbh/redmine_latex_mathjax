@@ -15,8 +15,7 @@ module RedmineLatexMathjax
   });
           MathJax.Hub.Typeset();
           </script>" +
-            javascript_include_tag('https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML') +
-            javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js')+
+            javascript_include_tag('/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML', :plugin => 'redmine_latex_mathjax') +
             '<script>
   jQuery.fn.contentChange = function(callback){
     var elms = jQuery(this);
@@ -45,7 +44,6 @@ module RedmineLatexMathjax
   },500);
 </script>' + 
             "<script>
-            $.noConflict();
             jQuery(document).ready(function($) {
                 $('#preview').contentChange(function() { try { MathJax.Hub.Typeset(); } catch(err) {}} );
             });
